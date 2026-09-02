@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Oscar Lima - Desenvolvedor Full Stack (1 Página P&B)</title>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 6mm 8mm;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+      }
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
+      }
+      .print-border {
+        border-color: #94a3b8 !important;
+      }
+      .print-bg {
+        background-color: #f8fafc !important;
+      }
+    }
+
+    /* Dimensão A4 para visualização idêntica em tela */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      max-width: 100%;
+      margin: 15px auto;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 850px) {
+      .a4-page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body class="py-4 sm:py-6">
+
+  <!-- Barra Superior de Ações (Oculta na Impressão) -->
+  <div class="no-print max-w-4xl mx-auto mb-4 px-4 flex flex-wrap items-center justify-between gap-2 text-xs">
+    <div class="flex items-center gap-2">
+      <span class="font-bold text-slate-800 uppercase tracking-wider text-[11px]">Versão 1 Página (P&B / Econômica)</span>
+      <span class="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[10px]">A4 Exato</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="index.html" class="bg-white hover:bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-300 font-medium transition-colors">
+        Ver Modo Claro Expandido
+      </a>
+      <a href="curriculo-dark.html" class="bg-slate-900 hover:bg-slate-800 text-cyan-300 px-3 py-1.5 rounded-lg border border-slate-700 font-medium transition-colors">
+        Ver Modo Escuro (Site)
+      </a>
+      <button onclick="window.print()" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-4 py-1.5 rounded-lg shadow transition-colors flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+        Imprimir (Ctrl + P)
+      </button>
+    </div>
+  </div>
+
+  <!-- Folha Única A4 -->
+  <div class="a4-page p-6 sm:p-7 text-slate-900 page-sheet flex flex-col justify-between">
+    
+    <div>
+      <!-- Cabeçalho Compacto -->
+      <header class="border-b-2 border-slate-800 pb-3 mb-3 flex flex-row items-center gap-4">
+        <div class="w-20 h-20 rounded-full border border-slate-400 overflow-hidden flex-shrink-0 bg-slate-100">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQGar8cVC0phVQ/profile-displayphoto-scale_400_400/B4DZ3q4R3eKAAg-/0/1777762118379?e=1789603200&v=beta&t=ZTSdrhX3paGqD32JoOGEmyFZD_jc8J83VJsteJ0-U0o" alt="Oscar Lima" class="w-full h-full object-cover grayscale">
+        </div>
+        
+        <div class="flex-1">
+          <div class="flex justify-between items-baseline">
+            <h1 class="text-2xl font-extrabold tracking-tight text-black">Oscar Lima</h1>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-300">Desenvolvedor Full Stack</span>
+          </div>
+          
+          <p class="text-xs font-semibold text-slate-800 mt-0.5">
+            Estudante do Técnico em Desenvolvimento de Sistemas — SENAI (Sistema S)
+          </p>
+
+          <!-- Dados de Contato em Linha -->
+          <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-slate-700">
+            <span><strong>Email:</strong> contato@oscarlima.com.br</span>
+            <span><strong>Tel/WhatsApp:</strong> +55 (21) 99106-1796</span>
+            <span><strong>Local:</strong> Niterói, RJ</span>
+            <span><strong>Site:</strong> oscarlima.com.br</span>
+            <span><strong>Workana:</strong> +100 avaliações 5★</span>
+            <span><strong>LinkedIn:</strong> linkedin.com/in/oscar-lima-b81684116</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Resumo Profissional -->
+      <section class="mb-3">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1">Perfil Profissional</h2>
+        <p class="text-[11px] text-slate-700 leading-relaxed text-justify">
+          Desenvolvedor <strong>Full Stack</strong> com experiência prática no desenvolvimento de ponta a ponta de websites, lojas virtuais, simuladores interativos e aplicações web com banco de dados. Utilizo <strong>Inteligência Artificial de forma prática no dia a dia</strong> para acelerar a escrita de código, pesquisas técnicas e prototipação ágil, entregando projetos rápidos, leves e focados no propósito do cliente.
+        </p>
+      </section>
+
+      <!-- Grid Principal: Experiência & Projetos (Esquerda) e Habilidades & Formação (Direita) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Coluna Esquerda: Experiência e Projetos (2/3) -->
+        <div class="md:col-span-2 space-y-3">
+          
+          <!-- Experiência Prática -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1.5">Experiência Profissional</h2>
+            
+            <div class="space-y-2">
+              <div>
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">Desenvolvedor Web Freelancer</h3>
+                  <span class="text-[10px] font-semibold text-slate-600">2023 - Presente</span>
+                </div>
+                <p class="text-[10.5px] text-slate-600 italic">Workana (+100 avaliações 5 estrelas) • Clientes Diretos</p>
+                <ul class="list-disc pl-3.5 text-[10.5px] text-slate-700 space-y-0.5 mt-0.5">
+                  <li>Criação de sites corporativos, landing pages e e-commerces com WordPress e PHP.</li>
+                  <li>Otimização de velocidade mobile (PageSpeed de 38 para 94+ no case <em>Albuquerque Paulo Advogados</em>).</li>
+                  <li>Uso de IA para acelerar escrita de código e automação de rotinas de desenvolvimento.</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">Desenvolvedor de Aplicações e Projetos Web</h3>
+                  <span class="text-[10px] font-semibold text-slate-600">2024 - Presente</span>
+                </div>
+                <p class="text-[10.5px] text-slate-600 italic">Aplicações Full Stack, Simuladores e Ferramentas</p>
+                <ul class="list-disc pl-3.5 text-[10.5px] text-slate-700 space-y-0.5 mt-0.5">
+                  <li>Aplicações web completas em <strong>Next.js</strong>, <strong>TypeScript</strong> e banco de dados <strong>Supabase</strong>.</li>
+                  <li>Desenvolvimento de ferramentas de cálculo com geração de relatórios PDF (jsPDF) e gráficos (Chart.js).</li>
+                  <li>Publicação e deploy contínuo em plataformas modernas na nuvem (Cloudflare e Vercel).</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Projetos em Destaque -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1.5">Projetos em Destaque</h2>
+            
+            <div class="space-y-1.5">
+              <div class="border-l-2 border-slate-800 pl-2">
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">GovAgent — Jogo Estratégico Web (2026)</h3>
+                  <span class="text-[10px] font-mono text-slate-600">Next.js 16 • Supabase • Cloudflare</span>
+                </div>
+                <p class="text-[10px] text-slate-700">Jogo web no estilo cartas/decisão política. Arquitetura serverless de alta velocidade (&lt;300ms) com banco Supabase.</p>
+              </div>
+
+              <div class="border-l-2 border-slate-600 pl-2">
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">Calculadora de Financiamentos CDC (2025)</h3>
+                  <span class="text-[10px] font-mono text-slate-600">JavaScript • Chart.js • jsPDF</span>
+                </div>
+                <p class="text-[10px] text-slate-700">Simulador de juros e amortização Price/SAC com gráficos comparativos e geração instantânea de laudo em PDF.</p>
+              </div>
+
+              <div class="border-l-2 border-slate-500 pl-2">
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">O Custo da Limpeza — Teoria dos Jogos (2025)</h3>
+                  <span class="text-[10px] font-mono text-slate-600">HTML5 Canvas • JS Puro</span>
+                </div>
+                <p class="text-[10px] text-slate-700">Simulador interativo de tomadas de decisão e equilíbrio de Nash com física vetorial de partículas no navegador.</p>
+              </div>
+
+              <div class="border-l-2 border-slate-400 pl-2">
+                <div class="flex justify-between items-baseline">
+                  <h3 class="text-xs font-bold text-slate-900">Sites Institucionais & E-commerce</h3>
+                  <span class="text-[10px] font-mono text-slate-600">WordPress • PHP • WooCommerce</span>
+                </div>
+                <p class="text-[10px] text-slate-700">Criação de páginas sob medida: <em>Albuquerque Paulo Advogados</em>, <em>GF Impermeabilizadora</em>, <em>M.A.R. Instituto</em> e <em>Mídia TV Shop</em>.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Depoimentos Reais -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1">Avaliações de Clientes (Workana)</h2>
+            <div class="grid grid-cols-2 gap-2 text-[10px] text-slate-700">
+              <div class="bg-slate-50 p-1.5 rounded border border-slate-200">
+                <p class="italic">"Profissional excelente, que me surpreendeu pela dedicação e qualidade. Recomendo."</p>
+                <p class="font-bold mt-0.5 text-[9.5px] text-slate-900">— Dr. Albuquerque Paulo (Advogado)</p>
+              </div>
+              <div class="bg-slate-50 p-1.5 rounded border border-slate-200">
+                <p class="italic">"Um dos melhores profissionais com quem já trabalhei! Atencioso, cumpre prazos."</p>
+                <p class="font-bold mt-0.5 text-[9.5px] text-slate-900">— Marcelo F. (Empresário)</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Coluna Direita: Habilidades, Formação & Contatos (1/3) -->
+        <div class="space-y-3">
+          
+          <!-- Habilidades Técnicas -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1.5">Conhecimentos</h2>
+            
+            <div class="space-y-1.5 text-[10.5px]">
+              <div>
+                <p class="font-bold text-slate-900">Uso Prático de IA</p>
+                <p class="text-slate-600 text-[10px]">Desenvolvimento ágil com IA, pesquisa rápida de soluções e testes de código.</p>
+              </div>
+
+              <div>
+                <p class="font-bold text-slate-900">Front-end & Web</p>
+                <p class="text-slate-600 text-[10px]">JavaScript, TypeScript, React, Next.js, HTML5 Canvas, HTML5/CSS3.</p>
+              </div>
+
+              <div>
+                <p class="font-bold text-slate-900">Back-end & Banco de Dados</p>
+                <p class="text-slate-600 text-[10px]">WordPress nativo, PHP, Supabase (PostgreSQL), APIs REST, WooCommerce.</p>
+              </div>
+
+              <div>
+                <p class="font-bold text-slate-900">Estilos & Mobile</p>
+                <p class="text-slate-600 text-[10px]">Tailwind CSS, Bootstrap, Design 100% Responsivo.</p>
+              </div>
+
+              <div>
+                <p class="font-bold text-slate-900">Deploy & Ferramentas</p>
+                <p class="text-slate-600 text-[10px]">Git, GitHub, Cloudflare, Vercel, Otimização de Performance, Chart.js, jsPDF.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Formação Acadêmica -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1.5">Formação</h2>
+            
+            <div class="space-y-1.5">
+              <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                <span class="text-[9px] font-bold uppercase text-slate-600 bg-slate-200 px-1.5 py-0.2 rounded">Em Andamento</span>
+                <h3 class="text-xs font-bold text-slate-900 mt-0.5">Técnico em Desenvolvimento de Sistemas</h3>
+                <p class="text-[10px] font-semibold text-slate-800">SENAI — Sistema S</p>
+                <p class="text-[9.5px] text-slate-600 mt-0.5">Lógica de programação, modelagem de banco de dados, engenharia de software e web.</p>
+              </div>
+
+              <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                <h3 class="text-xs font-bold text-slate-900">Estudos Complementares</h3>
+                <p class="text-[9.5px] text-slate-600 mt-0.5">Cursos em Next.js, TypeScript, WordPress Avançado e ferramentas de IA.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Diferenciais -->
+          <section>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-0.5 mb-1">Diferenciais</h2>
+            <ul class="list-disc pl-3 text-[10px] text-slate-700 space-y-0.5">
+              <li>Mais de 100 avaliações 5 estrelas no Workana.</li>
+              <li>Foco em páginas leves e boa velocidade de carregamento.</li>
+              <li>Atendimento direto, clareza e cumprimento de prazos.</li>
+            </ul>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Rodapé Discreto -->
+    <footer class="border-t border-slate-300 pt-1.5 mt-2 flex justify-between items-center text-[9px] text-slate-500">
+      <span>Oscar Lima — oscarlima.com.br</span>
+      <span>Niterói, RJ • +55 (21) 99106-1796 • contato@oscarlima.com.br</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
