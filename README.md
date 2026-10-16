@@ -80,6 +80,7 @@ Neste repositório você encontra diferentes formas de consultar e imprimir minh
 
 ### 🤝 Contato & Canais Oficiais
 
+- ✉️ **Email:** [oscarmoraes0@gmail.com](mailto:oscarmoraes0@gmail.com)
 - 🌐 **Site Pessoal:** [oscarlima.com.br](https://oscarlima.com.br)
 - ✍️ **Blog de Tecnologia:** [blog.oscarlima.com.br](https://blog.oscarlima.com.br)
 - 💼 **Perfil no Workana:** [workana.com/freelancer/0a2b643595285da17d12c892a0aaf149](https://www.workana.com/freelancer/0a2b643595285da17d12c892a0aaf149)
